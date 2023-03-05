@@ -1,0 +1,16 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name:  Run a one liner Script
+      run: echo "hello world"
+    - name: Runa  multi-line script
+      run: |
+        echo "build"
+        echo "Run Integration Test"
+        echo "Deploy"
