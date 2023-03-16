@@ -13,6 +13,6 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: ${{env.artifact_name}}
-        path: ${{env.GITHUB_WORKSPACE}}/README.md
+        path: .
 
 
