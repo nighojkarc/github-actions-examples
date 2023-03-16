@@ -14,3 +14,8 @@ jobs:
         echo "build"
         echo "Run Integration Test"
         echo "Deploy"
+    - name: Runa  multi-line script
+      run: |
+        echo "build"
+        echo "Run Integration Test"
+        echo "Deploy"
