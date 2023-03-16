@@ -1,10 +1,12 @@
-name: CI
+name: CI # name of the workflow
 
-on: [push]
 
+on: [push] # Events on which the workflow will
+
+# workflow must have atleast one job
 jobs:
-  build:
-    runs-on: ubuntu-latest
+  build: # job name
+    runs-on: ubuntu-latest  # type of machine on which workflow runs (runner)
     steps:
     - uses: actions/checkout@v1
     - name:  Run a one liner Script
