@@ -1,0 +1,22 @@
+name: env variable example
+env:
+  workflow_var: "i am workflow"
+  over_ride: "workflow over_ride"
+on: push
+
+jobs:
+  first:
+    env:
+      first_job_var: "i am first_job_var"
+      over_ride: "first_job_var over_ride"
+    runs-on: ubuntu-latest
+    steps:
+      - name: first step
+        env:
+          step_var: "i am step var"
+          over_ride: "step over_ride"
+        run: |
+          echo "workflow_var=" $workflow_var
+          echo "first_job_var=" $first_job_var
+          echo "step_var=" $step_var
+          echo "over_ride=" $over_ride
