@@ -1,0 +1,18 @@
+name: challenge-02
+on: push
+env:
+  artifact_name: my_artifact
+
+jobs:
+  Upload_artifact:
+    runs-on: ubuntu-latest
+    steps:
+    - name: checkout 
+      uses: actions/checkout@v2
+    - name: upload artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: ${{env.artifact_name}}
+        path: ${{env.GITHUB_WORKSPACE}}/README.md
+
+
